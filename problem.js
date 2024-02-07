@@ -16,3 +16,17 @@ function calculateMoney(ticketSale) {
         return "!!!Invalid input!!!\nGive a number value : )";
     }
 }
+
+// Problem - 2 
+function checkName(name) {
+    const expectedLastChars = [`a`,`y`,`i`,`e`,`o`,`u`,`w`];
+    if(typeof name === 'string'){
+        if(expectedLastChars.includes(name[name.length-1].toLowerCase())){
+            return "Good Name";
+        }else{
+            return "Bad Name";
+        }
+    }else{
+        return "invalid";
+    }
+}
