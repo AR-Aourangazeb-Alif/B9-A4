@@ -50,3 +50,16 @@ function deleteInvalids(array) {
         return "Invalid Array";
     }
 }
+
+// Problem - 4 
+function password(obj) {
+    if((obj.name && obj.birthYear && obj.siteName) && (obj.birthYear < 9999 && obj.birthYear >999) && (Object.keys(obj).length === 3)){
+
+        const password = obj.siteName[0].toUpperCase() + obj.siteName.slice(1) + "#" + obj.name + "@" + obj.birthYear;
+        return password;
+
+    }else{
+        return "invalid";
+    }
+}
+console.log(password({ name: "kolimuddin" , birthYear: 1999 , siteName: "google" }));
