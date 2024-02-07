@@ -62,4 +62,3 @@ function password(obj) {
         return "invalid";
     }
 }
-console.log(password({ name: "kolimuddin" , birthYear: 1999 , siteName: "google" }));
