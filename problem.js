@@ -67,10 +67,9 @@ function password(obj) {
 // Problem - 5
 function monthlySavings(arr , livingCost) {
 
-    let netIncome = 0;
-
     if(Array.isArray(arr) && typeof livingCost === "number" && !isNaN(livingCost)){
-        
+
+        let netIncome = 0;
         for(const i of arr){
             if(typeof i !== "number" || isNaN(i) || i<0){
                 netIncome = false;
