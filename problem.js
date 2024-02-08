@@ -62,3 +62,44 @@ function password(obj) {
         return "invalid";
     }
 }
+
+
+// Problem - 5
+function monthlySavings(arr , livingCost) {
+
+    let netIncome = 0;
+
+    if(Array.isArray(arr) && typeof livingCost === "number" && !isNaN(livingCost)){
+        
+        for(const i of arr){
+            if(typeof i !== "number" || isNaN(i) || i<0){
+                netIncome = false;
+                break;
+            }else{
+                if(i<3000){
+                    netIncome += i;
+                }else{
+                    netIncome += i*0.8;
+                }
+            }
+        }
+
+        if(netIncome){
+
+            const savings = netIncome - livingCost;
+            if(savings >= 0){
+                return savings;
+            }else{
+                return "earn more";
+            }
+
+        }else{
+            return "invalid input";
+        }
+
+    }else{
+        return "invalid input";
+    }
+    
+}
+console.log(monthlySavings([9000 , 2700 , 3400] , 6000));
